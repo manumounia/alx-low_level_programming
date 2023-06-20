@@ -1,13 +1,12 @@
-#include <stdio.h>
+#include "main.h"
+#include <unistd.h>
 /**
- * this main program prints _putchar
- * followed by a new line
- * The program returns 0
+ * _putchar - writes the character c to stdout
+ * c: The character to print
+ *
+ * Return success 1.
  */
-int main(void)
+	int _putchar(char c)
 {
-	char put_char="_putchar";
-
-	printf("%s \n",put_char);
-	return (0);
+	return (write(1, &c, 1));
 }
