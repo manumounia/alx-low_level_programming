@@ -1,15 +1,27 @@
 #include "main.h"
 /**
- * _strcat - returns the length of a string
- * @dest and src : strings
- * Return: pointer to a string
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
+ *
+ * Return: void
  */
+
 char *_strcat(char *dest, char *src)
 {
-	char *dest[12];
-	char *src[12];
+	int i = 0;
+	int j = 0;
 
-	strcat(dest,src);
-	
+	while (dest[i] != '\0')
+{
+	i++;
+}
+	while (src[j] != '\0')
+{
+	dest[i]=src[j];
+	i++;
+	j++;
+}
+	dest[i]='\0';
 	return (dest);
 }
